@@ -1,3 +1,4 @@
+//business logic
 var begin= {
   player1Score: 0,
   player2Score: 0,
@@ -9,6 +10,7 @@ function dieRoll () {
   die1 = Math.floor(Math.random()*6) +1;
   return die1;
 }
+
 var playerRoll = function() {
   var roll = dieRoll();
   if(roll ===1){
@@ -27,6 +29,7 @@ var playerRoll = function() {
   }
   return roll;
 }
+
 function holdThePig() {
   var currentPlayer = begin.playerUp;
   if (currentPlayer ===1) {
@@ -37,6 +40,9 @@ function holdThePig() {
   begin.Score = 0;
   switchPlayer();
 }
+
+//user interface logic
+
 function switchPlayer () {
   if (begin.playerUp === 1) {
     $("#player1Button").hide();
@@ -49,7 +55,6 @@ function switchPlayer () {
     begin.playerUp = 1;
 
   }
-}
 }
 
 function resetGame() {
@@ -69,6 +74,7 @@ function alertWinner(playerNumber) {
   resetGame();
   $(".gameStats").text(0);
 }
+
 $(document).ready(function() {
 
   $("form#pigForm").submit(function(event){
@@ -91,6 +97,7 @@ $(document).ready(function() {
     $(".Score").text(begin.Score);
 
   });
+
   $(".holdPig").click(function(){
     holdThePig();
     $("Result").text("");
@@ -99,5 +106,4 @@ $(document).ready(function() {
     $(".playerStatus").text(begin.playerUp);
   });
 });
-
 
