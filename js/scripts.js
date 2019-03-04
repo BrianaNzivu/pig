@@ -27,3 +27,13 @@ var playerRoll = function() {
   }
   return roll;
 }
+function holdThePig() {
+  var currentPlayer = begin.playerUp;
+  if (currentPlayer ===1) {
+    begin.player1Score += begin.Score;
+  } else {
+    begin.player2Score += begin.Score;
+  }
+  begin.Score = 0;
+  switchPlayer();
+}
