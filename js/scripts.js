@@ -69,4 +69,27 @@ function alertWinner(playerNumber) {
   resetGame();
   $(".gameStats").text(0);
 }
+$(document).ready(function() {
+
+  $("form#pigForm").submit(function(event){
+    var playerName1 = $("input#playerName1").val();
+    var playerName2 = $("input#playerName2").val();
+      $("span#playerName1").text(playerName1);
+      $("span#playerName2").text(playerName2);
+      $("#player2Button").hide();
+      $("#player1Button").show();
+      $(".playerStatus").text(begin.playerUp);
+      event.preventDefault();
+
+    var nameHolder = new Names(playerName1, playerName2);
+  })
+
+
+  $(".rollPig").click(function() {
+    pigResult = playerRoll();
+    $(".Result").text(pigResult);
+    $(".Score").text(begin.Score);
+
+  });
+
 
