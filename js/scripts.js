@@ -91,5 +91,13 @@ $(document).ready(function() {
     $(".Score").text(begin.Score);
 
   });
+  $(".holdPig").click(function(){
+    holdThePig();
+    $("Result").text("");
+    $(".player1Score").text(begin.player1Score);
+    $(".player2Score").text(begin.player2Score);
+    $(".playerStatus").text(begin.playerUp);
+  });
+});
 
 
