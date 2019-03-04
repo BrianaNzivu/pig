@@ -37,3 +37,36 @@ function holdThePig() {
   begin.Score = 0;
   switchPlayer();
 }
+function switchPlayer () {
+  if (begin.playerUp === 1) {
+    $("#player1Button").hide();
+    $("#player2Button").show();
+    begin.playerUp = 2;
+
+  } else {
+    $("#player2Button").hide();
+    $("#player1Button").show();
+    begin.playerUp = 1;
+
+  }
+}
+}
+
+function resetGame() {
+  begin.player1Score = 0;
+  begin.player2Score = 0;
+  begin.playerUp = 1;
+  begin.Score = 0;
+}
+
+function alertEndTurn(){
+  alert("Sorry - you rolled a 1.  Your score remains the same and your turn is over.");
+  $(".playerStatus").text(begin.playerUp);
+}
+
+function alertWinner(playerNumber) {
+  alert("Player " + playerNumber + " is the BIG winner!!");
+  resetGame();
+  $(".gameStats").text(0);
+}
+
