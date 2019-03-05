@@ -24,6 +24,7 @@ None but feel free to notify me in case you come across one.
 * jQuery
 * bootstrap
 * HTML
+
 ## Support and contact details
 Incase you run into any error feel free to notify me using my email address bjnzivu@gmail.com
 ### License
