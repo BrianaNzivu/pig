@@ -10,12 +10,13 @@ None but feel free to notify me in case you come across one.
  BEHAVIOUR                                      | INPUT           | OUTPUT          |
 ------------------------------------------------|-----------------|-----------------|
  Player 1 clicks ROLL button                    |                 |                 |
- is generated If Player 1 rolls any number other|                 |                 |
- -----------------------------------------------|-----------------|-----------------|    
- than 1, that roll is added to round total      | Roll = 2        | Round total = 2 |
- If Player 1 rolls a 1, no score is added and   | Roll=1          |                 |
- round for Player 1 ends                        |                 |                 |                                                        | Round total = 2 | Total score = 2 |  
- Repeat for Player                              | Round total=0   |  Total score=0  |         -----------------------------------------------|-----------------|-----------------|                                                                                         
+ is generated If Player 1 rolls any number other|                 |                 |    
+ than 1, that roll is added to round total      | Roll = 2-6      |Round total = 2-6|
+ -----------------------------------------------|-----------------|-----------------| 
+ If Player 1 rolls a 1, no score is added and   | Roll=1          |  Round total=0  |
+ round for Player 1 ends                        |                 |                 |            
+ -----------------------------------------------|-----------------|-----------------|
+                                                                                       
 
 ## Technologies Used
 * JavaScript
